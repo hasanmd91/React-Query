@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 
 const Contact = () => {
-  const { data, isLoading, isError, refetch } = useQuery(["data"], () => {
+  const { data, isLoading, isError } = useQuery(["data"], () => {
     return Axios.get("https://jsonplaceholder.typicode.com/posts").then(
       (res) => res.data
     );
